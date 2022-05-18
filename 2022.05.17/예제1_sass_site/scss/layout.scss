@@ -1,0 +1,92 @@
+// layout 공통
+$haederHeight: 60px;
+$submenuHeight: 40px;
+$footerHeight: 80px;
+$mainMinHeight: calc(100vh - (#{$haederHeight} + #{$footerHeight} + 51px));/*51 = footer margin*/
+#wrap {
+  width: 1320px;
+  margin: 0 auto;
+  #header {
+    position: relative;
+    height: $haederHeight;
+    // 로고 영역
+    #top-logo {
+      float: left;
+      a {
+        height: $haederHeight;
+        line-height: $haederHeight;
+      }
+    }
+    // 메인메뉴
+    #top-nav {
+      position: relative;
+      height: $haederHeight; /*고정형*/
+      float: right;
+      ul { // #top-nav ul 표기와 동일
+        float: left;
+        li {
+          position: relative; /*블록을 만듬?*/
+          float: left;
+          margin-left: 30px;
+          /*li의 첫번째 요소의 margin-left 0으로*/
+          &:first-child { /*& = this*/
+            margin-left: 0;
+          }
+          a {
+            display: inline-block; /*버튼영역을 넓게 하기 위해*/
+            width: 100%;
+            height: 100%;
+            line-height: $haederHeight;
+          }
+          &:hover {
+            .sub-menu {
+              visibility: visible;
+              top: 100%;
+              opacity: 1;
+            }
+          }
+          //submenu 구현
+          .sub-menu {
+            position: absolute;
+            border: 1px solid $borderColorPrimary;
+            visibility: hidden; /*hidden시 사라지고 visible시 보임*/
+            top: calc(100% - 3px);
+            opacity: 0;
+            transition: .3s;
+            li {
+              width: 100%; /*부모요소의(li)  float를 초기화시킴*/
+              margin: 0; /*부모요소의(li)   margin-left: 30px를 초기화시킴*/
+              background: white;
+              box-sizing: border-box;
+              padding: 0 10px;
+              min-width: 150px;
+              transition: .3s;
+              &:hover {
+                background: $gbtnColor;
+                a {
+                  color: white;
+                }
+              }
+              a {
+                line-height: $submenuHeight;
+                height: $submenuHeight;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    min-height: $mainMinHeight; /*스크롤 안 생기게?*/
+  }
+  #footer {
+    margin-top:50px;
+    height: $footerHeight;
+    line-height: $footerHeight;
+    text-align: center;
+    box-sizing: border-box;
+    border-top: 1px solid $borderColorPrimary;
+    color: $fontColorPrimary;
+  }
+}

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #666666;
+  min-width: 760px;
+}
+a { color : #666666;}
+
+/* header Layout */
+#main-header {
+  height: 60px;
+  line-height: 60px;         /*중첩조심*/
+  padding-left: 10px;
+  border-bottom: 1px solid black;
+  background: #1d4088;
+}
+
+#main-header h1 a {
+  color: white;
+}
+
+/* main-gnb */
+#main-gnb {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  background: #32394a;
+}
+
+#main-gnb ul {
+  overflow: hidden;
+}
+
+#main-gnb ul.left {
+  float: left;
+}
+
+#main-gnb ul.right {
+  float: right;
+}
+
+#main-gnb > ul > li {      /* '>' 자식 선택자 */
+  float: left;
+}
+
+#main-gnb a {
+  display: block;
+  padding: 10px 20px;  /*영역*/
+  color: white;
+  font-weight: bold; /*700*/
+}
+
+/*content 영역*/
+#wrap {
+  overflow: hidden;
+  background: #71b1d1;
+}
+
+#wrap > #main-lnb {
+  float: left;
+  width: 200px;
+}
+
+#wrap #content-wrap {
+  float: left;
+  width: calc( 100% - 200px );
+}
+
+#main-lnb > ul > li > a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  border-bottom: 1px solid #96d6f6;
+  color: white;
+
+}
+
+#content {
+  background: white;
+  padding: 30px;   /*width값을 위에서 주어 따로 생성*/
+}
+
+/* 하단영역 */
+#main-footer {
+  padding: 10px;
+  border-top: 3px solid black;
+  text-align: center;
+}

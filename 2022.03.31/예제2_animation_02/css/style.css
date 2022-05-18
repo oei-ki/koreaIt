@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  background: red;
+  animation-name: bgcolorchange;
+  animation-duration: 2s;
+  animation-direction: alternate; /*다시돌아오는거*/
+  animation-iteration-count: infinite;
+}
+
+/* .box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  animation-name: bgcolorchange;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+} */
+
+.box:nth-child(1) {
+animation-name: bgcolorchange1;
+}
+
+.box:nth-child(2) {
+animation-name: bgcolorchange2;
+top: 100px;
+animation-duration: 1s;
+
+}
+
+@keyframes bgcolorchange1 {
+  0% {
+  background: red;
+  /* font-size: 0;
+  width: 0;
+  height: 0; */
+  left: 0;
+  }
+  50% {
+  background: yellow;
+  /* font-size: 100px;
+  width: 250px;
+  height: 250px; */
+  left: 250px;
+  }
+  100% {
+  background: red;
+  /* font-size: 0;
+  width: 0;
+  height: 0; */
+  left: 0;
+  }
+}
+
+@keyframes bgcolorchange2 {
+  from {
+  background: red;
+  left: 0;
+  }
+  to {
+  background: yellow;
+  left: 250px;
+  }
+
+}

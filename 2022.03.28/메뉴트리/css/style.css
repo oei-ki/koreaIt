@@ -1,0 +1,92 @@
+@charset "UTF-8";
+.menu-tree-management {
+  border: 1px solid #f1f1f1;
+  display: inline-block; /*컨텐츠사이즈에 맞게 붙음 */
+  box-sizing: border-box;
+  padding: 30px;
+  background: #f9f9f9;
+}
+
+.menu-tree-management .title {
+  font-size: 16px; /*body,html defaultsize 와 동일*/
+  font-weight: bold; /*bold: 700 / nomal:400*/
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.menu-tree-management input[type=checkbox] {
+  display: none; /*체크박스없앰*/
+}
+
+.menu-tree-management input[type=checkbox] + label { /* + 인접선택자 */
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+  font-size: 19px;
+  color: #333333;
+  height: 19px;
+  line-height: 19px;
+  /* background-image: url('../img/menu_tree_icon_plus.png');
+  background-repeat: no-repeat; */  /*포지션까지 세가지의 속성을 넣어야함 이렇게 하면?*/
+}
+
+.menu-tree-management input[type=checkbox] + label:before { /*top, heighe등 디테일한 위치선정, 이미지등 위치를 자세하고 정확하게 하기 위해*/
+  content:'';
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top : 0;
+  left: 0;
+  background-image: url('../img/menu_tree_icon_plus.png');
+}
+
+/* .menu-tree-management input[type=checkbox]:checked + label:before {
+  background-image: url('../img/menu_tree_icon_minus.png');
+} */
+
+.menu-tree-management input[type=checkbox]:checked + label:after { /*after 체크됐을때만 나와야함*/
+  content:'';
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top : 0;
+  left: 0;
+  background-image: url('../img/menu_tree_icon_minus.png');
+}
+
+.menu-tree-management input[type=checkbox] + label ~ * { /*  *==.sub-menu */
+  display: none;
+}
+
+.menu-tree-management input[type=checkbox]:checked + label ~ * {
+  display: block;
+}
+
+.menu-tree-management input[type=checkbox]:checked + label {
+  color: #1a73c4;
+}
+
+.menu-tree-management .table-ctn .menu-tree > ul > li {
+  margin-bottom: 30px;
+}
+
+.menu-tree-management .table-ctn .menu-tree .sub-menu {
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+.menu-tree-management .table-ctn .menu-tree .sub-menu > li {
+  position: relative; /*앞에 l자 때문?*/
+  padding-left: 18px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: #66666;
+}
+
+.menu-tree-management .table-ctn .menu-tree .sub-menu > li::before {
+  content: 'L';
+  position: absolute;
+  top: 0;
+  left: 0;
+}

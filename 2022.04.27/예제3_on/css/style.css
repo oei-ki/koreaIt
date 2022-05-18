@@ -1,0 +1,68 @@
+@charset "UTF-8";
+*{ box-sizing: border-box; margin: 0; padding: 0;}
+html,body { height: 100%;}
+ul,ol { list-style: none;}
+a{color:#666; text-decoration: none;}
+
+/*img 형태 메뉴 사용 시 적용*/
+a.on {
+  border: 2px solid red;
+}
+
+ul {
+  display: flex;  /*부모요소에 flex로 컨테이너를 생성해 자식요소를 담는다*/
+  margin-bottom: 20px;
+}
+
+ul li a { /*글을 안보이게하고 위치에 박스를 생성해 이미지 삽입*/
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -9999px;  /*값이 양수이면 들여쓰기, 값이 음수이면 내어쓰기가 됩니다.*//*글 안보이게 함*/
+  background-size: cover;
+}
+
+ul li:nth-child(1) a {
+  background-image: url('../img/img01.jpg');
+}
+
+ul li:nth-child(2) a {
+  background-image: url('../img/img02.jpg');
+}
+
+ul li:nth-child(3) a {
+  background-image: url('../img/img03.jpg');
+}
+
+/* text 형태 메뉴 사용 시 적용 */
+ul li.txt a {
+  border: 0;
+}
+
+ul li.txt a.on::after {
+
+   content: '';
+   position: absolute;
+   display: inline-block;
+   left: 0;
+   right: 0;
+   /* width:100%; == left: 0; right: 0; */
+   bottom: 0;
+   height: 2px;
+   background: red;
+}
+
+ul li.txt a { /*사라진 텍스트 나오게 함*/
+  text-indent: 0px;
+  width: auto;
+
+}
+
+ul li.txt:nth-child(1) a, ul li.txt:nth-child(2) a, ul li.txt:nth-child(3) a{
+  background-image: none;
+}

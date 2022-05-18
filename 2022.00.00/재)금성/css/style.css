@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{margin: 0; padding: 0; border: 0;}
+ul,li {list-style: none;}
+html {
+  color: #555;
+  font-size: 14px;
+  /* font-family: 'Lexend', sans-serif; */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#wrap {
+  position: relative;
+  width:100%;
+  height: 1000vh;
+}

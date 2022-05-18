@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+html,body { height: 100%;}
+input#toggle {display: none;}
+input#toggle + #wrap > #toggle-gnb-wrap {display: none;}  /*checked가 되면 보이게 설정*/
+input#toggle:checked + #wrap > #toggle-gnb-wrap {display: block;;}
+
+/*상단 영역*/
+#main-header {
+  position: relative;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background-image: url('../img/header_background.png'); /*반복*/
+}
+
+#main-header > a, #main-header > label {
+  position: absolute;
+  display: block;
+  height: 32px;  /*버튼크기*/
+  }
+
+#main-header h1 a {
+  color: white;
+  font-weight: bold;
+}
+
+#main-header > a.left {
+  width:62px;
+  top: 7px;
+  left: 5px;
+  background-image: url('../img/dg_sprites.png');
+  background-position: 0,0;  /*x축y축*/
+  overflow: hidden;
+  text-indent: -9999px;  /*들여쓰기 //텍스트 브라우저 바깥으로*/
+}
+
+ #main-header > label.right {
+  width:32px;
+  top: 7px;
+  right: 5px;
+  background-image: url('../img/dg_sprites.png');
+  background-position: -62px 0;    /*x축y축*/
+  overflow: hidden;
+  text-indent: -9999px;
+}
+/* #main-header > label.right {
+  width:32px;
+  top: 7px;
+  right: 5px;
+  background-image: url('../img/dg2_sprites.png');
+  background-position: -10px -62px;  x축y축   x축==padding-10px// y축==버튼크기32px+padding30px
+  overflow: hidden;
+  text-indent: -9999px;  들여쓰기 //텍스트 브라우저 바깥으로
+} */
+
+/*toggle gnb*/
+#toggle-gnb-wrap {
+  background: #363636;
+  padding: 15px;
+}
+
+#toggle-gnb > ul {overflow: hidden;}
+#toggle-gnb > ul > li {
+  width: 80px;
+  float: left;
+  text-align: center;
+}
+
+#toggle-gnb > ul > li > a {
+  color: white;
+}
+/*상단 gnb*/
+#top-gnb {
+  overflow: hidden;
+  border-bottom: 1px solid black;
+  background: #b42111;
+}
+
+#top-gnb > div {
+  width: 25%;
+  float: left;
+}
+
+#top-gnb > div > a {
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+}
+/*하단 gnb*/  /*테이블로 만들어 정렬하는 방법*/
+#bottom-gnb {
+  display: table;  /*q부모영역 테이블 생성*/
+  width: 100%;
+  border-bottom: 1px solid black;
+ }
+
+ #bottom-gnb > div {
+   position: relative;  /*relative을 포지션으로 적용하면서 기준점이 됨*/
+   display: table-cell; /*자식요소 셀 생성 */
+   height: 35px;
+   vertical-align: middle;  /*높이 중간 정렬(테이블은line-height아니고 vertical-align 사용)*/
+ }
+
+ #bottom-gnb > div > a {
+   display: block;;
+   text-align: center;
+ }
+
+#bottom-gnb div:before {
+  content: '';
+  position: absolute;  /*부모 요소 중 static이 아닌 position 속성을 갖고 있는 요소를 기준*/
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  background: black;
+  top: calc( 50% - 7.5px );
+}
+
+#bottom-gnb div:first-child:before {
+  display: none;
+}
+
+#main-section {
+  padding: 10px;
+}
+#main-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#main-section time + p {
+  margin-top: 20px;
+}
+
+#footer {
+  height: 50px;
+  text-align: center;
+  border-top: 2px solid black;
+}
+
+#footer span {
+  display: block;
+  line-height: 50px;
+}

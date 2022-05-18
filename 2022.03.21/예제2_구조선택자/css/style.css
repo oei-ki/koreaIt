@@ -1,0 +1,94 @@
+@charset "UTF-8";
+#header {
+  border-bottom: 1px solid #ffe6a1;
+  padding:0 15px ;     /*좌우*/
+  /* padding: 0 0 0 0 ;     /*탑기준으로 시계방향*/
+  /* padding: 0 0   ;    /*상하*/
+  overflow: hidden; /*부모설정이라 잡아줘야함*/
+}
+
+/*id#으로 가져와서 설정*/
+#gnb {
+  float: right;
+}
+
+
+#gnb ul {
+  overflow: hidden;  /*부모설정 고정시켜줌*/
+}
+#gnb ul li{
+  float: left;    /*메뉴를 가로*/
+  height: 60px;
+  margin-right: 10px;  /*간격*/
+}
+
+#gnb ul li:last-child {   /*콜론이랑 띄어쓰기x*/
+  margin-right: 0;
+}
+
+/* #gnb ul li:first-child {
+  margin-left: 50px;
+} */
+
+/*
+#gnb ul li:first-child a {
+   color: red;
+} */
+
+#gnb ul li a {
+  line-height: 60px;  /*줄간격*/
+}
+
+#container {
+  width: 1200px;
+  margin: 0 auto;   /*auto좌우를 똑같이 배분*/
+  min-height: 500px;
+
+}
+
+#container h2 {
+  text-align: center;
+  color: #666666;
+  padding: 30px 0 15px;
+  border-bottom: 1px solid #ffe6a1;
+  margin-bottom: 15px;
+
+}
+
+#container section {
+  overflow: hidden;   /*부모설정이라 잡아줘야함*/
+  text-align: center;
+
+}
+
+#container section .items {
+  float: left;
+  /* width: calc( 25% - 72px ); */
+  width: calc( 25% - 10px );
+  /* width: 25%; */
+  box-sizing: border-box;  /*border영역까지 포함 한줄로 표현*/
+  height: 100px;
+  border: 1px solid red;    /*총 108px이라 밑으로 내려감(2줄)*/
+  padding: 10px 20px;
+  margin-right: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:  20px;
+  padding-right: 20px; */
+}
+
+#container section .items:last-child {
+  width: 25%;
+  margin-right: 0;
+}
+
+#footer{
+  text-align: center;
+  border-top: 1px solid #ffe6a1;
+}
+
+#footer .inner {
+  width: 1200px;
+  margin: 0 auto;
+  background:red;
+}

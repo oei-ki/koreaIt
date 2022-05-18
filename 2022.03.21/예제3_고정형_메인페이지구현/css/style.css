@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#header {
+  overflow: hidden;
+  border: 1px solid #f1f1f1;
+  padding: 0 15px;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo a {
+  line-height: 60px;
+  font-weight: 100;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+#header #gnb {
+  float: right;
+}
+
+#header #gnb ul {
+  overflow: hidden;
+}
+
+#header #gnb ul li {
+  float: left;
+  height: 60px;
+  /* background: red; */
+  margin-right: 10px;
+
+
+}
+
+#header #gnb ul li a {
+  line-height: 60px;
+}
+
+#header #gnb ul li:last-child {
+  margin-right: 0;
+}
+/* mainbanner area */
+#mainbanner {
+  height: 850px;
+  background-image: url('../img/main_banner_img.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* gallery area */
+#container {
+  width: 1200px;
+  min-height: 500px;
+  margin: 0 auto;
+
+}
+#container h2 {
+  text-align: center;
+  color: #666666;
+  padding: 30px 0 15px;
+  margin-bottom: 15px;
+  border: 1px solid #f1f1f1;
+}
+
+#container section {
+    overflow:hidden;
+}
+
+/* items 공통 스타일- */
+#container section .items h3 {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+  /*위소스 풀어쓰면
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px; */
+}
+
+#container section .items img {
+  width: 100%;
+}
+
+/* type-a area*/
+#container section.type-a .items {
+  float: left;
+  width: calc( 25% - 40px );
+  min-height: 100px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#container section.type-a .items .bg_box {
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#container section.type-a .items:nth-child(4n+1) .bg_box {
+  background-image: url('../img/m_01.png');
+}
+
+#container section.type-a .items:nth-child(4n+2) .bg_box {
+  background-image: url('../img/m_02.png');
+}
+
+#container section.type-a .items:nth-child(4n+3) .bg_box {
+  background-image: url('../img/m_03.png');
+}
+
+#container section.type-a .items:nth-child(4n+4) .bg_box {
+  background-image: url('../img/m_04.png');
+}
+
+/* type-b area*/
+#container section.type-b .items {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+#container section.type-b .items .box {
+  min-height: 100px;
+  margin: 0 10px 20px;
+  padding: 10px;
+  /* border: 1px solid #f1f1f1; */
+}
+
+/* #footer {
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+  padding: 20px 0;
+  margin-top: 50px;
+  background: #f9f9f9;
+}
+
+#footer .inner {
+  width: 1200px;
+  margin: 0 auto;
+} */
+
+
+
+
+
+/* body.text-color.bg {background: blue;}         /*구체적으로 지정해줄수록 우선순위가 높아짐
+body.bg {background: yellow;}
+body {background: red;}
+body.text-color {color: red;}           /*.은 다중클래스*/

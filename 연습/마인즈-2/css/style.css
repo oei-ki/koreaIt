@@ -1,0 +1,70 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+a {color:black;}
+/* 상단바 */
+#header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: #007aff;
+  color: white;
+
+  position: fixed;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.logo {
+  float: left;
+}
+
+#header .header-right {
+  display: flex;
+  text-align: center;
+  align-items: none;
+  /* float: right; */
+  background: yellow;
+}
+
+.header-menu {
+  justify-content: center;
+  align-items: center;
+  /* float: left; */
+  display: inline-block;
+  background: red;
+}
+
+.header-menu > ul {
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.header-menu > ul > li {
+  padding: 0 30px;
+  float: left;
+  }
+
+.header-menu ul.sub-menu {
+  display: none;
+  font-size: 14px;
+}
+.header-menu ul.sub-menu li {
+  padding-bottom: 10px;
+}
+
+#header .searchbar {
+  float: right;
+  margin-left: 10px;
+  background: red;
+}
+/* #header .header-right a {
+  color:white;
+} */
+
+/* #header .header-right .gnb .header-menu {
+  position: relative;
+  float: right;
+}
+*/

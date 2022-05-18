@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+html, body { height: 100%; }
+body {background-color: red;}
+#wrap {
+  display: flex; /*유연성있게 정렬?뭔말*/
+  justify-content: center; /*좌우정렬*/
+  align-items: center; /*vertical-align=center;과 같은 효과*/
+  height: 100vh
+  /*
+  display: table;
+  width: 100vw;
+  height: 100vh;  안좋은방법2*/
+}
+
+#wrap::before {
+  content: 'red';
+  font-size: 2em;  /* em 부모 크기의 2배  기본 16px=> 32px*/ /* 부모요소(body)의 font-size : 16px 의 2베 32px*/
+  color: white;
+
+  /*display: table-cell;
+  vertical-align: middle;
+  text-align: center;  안좋은방법2*/
+
+  /* display: block;
+  text-align: center;
+  line-height: 100vh;  정렬의 안좋은 방법1  */
+}
+
+
+/*media query*/
+@media screen and (max-width: 992px ) { /*screen대신 all도 사용  ;마무리x // and 브레이크포인트*/
+  body {background: green;}
+  #wrap::before { /*가상컨텐츠 글 생성*/
+    content: 'green';
+  }
+}  /*이 부분이 밑에 내려가서 우선순위가 높아지면 블루효과는 보이지 않는다.*/
+
+@media screen and (max-width: 600px) {  /*숫자를 내림차순으로 배치한다.*/
+  body { background: blue; font-size: 14px;}
+  #wrap::before {
+    content: 'blue';
+  }
+}
+
+@media screen and (min-width:320px ) and (max-width: 450px) {  /*max-width 숫자를 내림차순으로 배치한다.*/
+  body { background: yellow; font-size: 10px;}  /*and (min-width:320px ) and (max-width: 450px) 조건으로 인해 320이하는 바로 위의 조건이 적용*/
+  #wrap::before {
+    content: 'yellow';
+    color:#666666;
+  }
+}
+ /*-----------------------------------------------------------------------------------------------*/
+@media screen and ( orientation: landscape ) { /*가로*/
+  body {background: black;}
+}
+
+@media screen and ( orientation: portrait ) { /*세로*/
+  body {background: white;}
+}

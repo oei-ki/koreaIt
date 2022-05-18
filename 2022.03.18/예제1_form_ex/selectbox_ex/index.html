@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>index box ex</title>
+  </head>
+  <body>
+    <h1>select loaction of travel</h1>
+    <form method="get">  <!--이름과 같이 어떠한 양식에 유저가 입력을 하는 형태 ex)로그인창, 회원가입 양식, 회원정보 수정, 검색창 등--><!--action 입력값을 넘겨줄 주소?/ -->
+      <select id="kind" name="kind">
+        <option value="경기">경기</option>
+        <option value="경북">경북</option>
+      </select>
+      <select id="kindofdevice" name="kindofdevice">
+        <optgroup label="경기">
+          <option value="수원">수원</option>
+          <option value="인천">인천</option>
+          <option value="성남">성남</option>
+        <optgroup label="경북">
+          <option value="대구">대구</option>
+          <option value="안동">안동</option>
+          <option value="상주">상주</option>
+
+        </optgroup><!--입력, 전송위해 fomr 사용-->
+
+
+      </select>
+      <input id="quantity" type="number" name="quantity" value="0" mim="0" max="100">
+      <button type="submit" name="button">예약하기</button><!--submit - 던져주는 역할?제출-->
+    </form>
+
+  </body>
+</html>

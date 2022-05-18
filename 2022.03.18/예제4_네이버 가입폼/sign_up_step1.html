@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입 step1</title>
+  </head>
+  <body>
+    <h1>naver</h1>
+    <form>
+      <article>
+        <dl>
+          <dt>
+            <input type="checkbox" name="ch1"><span>네이버 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 정보 수신(선택)에 모두 동의합니다.</span>
+          </dt>
+        </dl>
+        <!-- dl은 dt랑 세(타이틀이 있는 리스트)앞은 dt 뒤는 dd?? -->
+      </article>
+      <article>
+        <dl>
+          <dt>
+            <input type="checkbox" name="ch2"><span>네이버 이용약관 동의</span><span class="checkcox">(필수)</span>
+          </dt>
+          <dd>이용약관...</dd>
+        </dl>
+      </article>
+      <article>
+        <dl>
+          <dt>
+            <input type="checkbox" name="ch2"><span>개인정보 수집 및 이용 동의</span><span class="check-item">(필수)</span><a href="#">어린이용 안내</a>
+          </dt>
+          <dd>개인정보 수집 및 이용 동의...</dd>
+        </dl>
+      </article>
+      <article>
+        <dl>
+          <dt>
+            <input type="checkbox" name="ch3"><span>위치정보 이용약관 동의</span><span class="check-item">(선택)</span>
+          </dt>
+          <dd>위치정보 이용약관 동의.......</dd>
+        </dl>
+      </article>
+      <article>
+        <dl>
+          <dt>
+            <input type="checkbox" name="ch3"><span>프로모션 정보 수신 동의</span><span class="checkcox">(선택)</span>
+          </dt>
+          <dd>네이버에서 제공하는 이벤트/혜택 등 다양한 정보를 휴대전화(네이버앱 알림 또는 문자), 이메일로 받아보실 수 있습니다. 일부 서비스(별도 회원 체계로 운영하거나 네이버 가입 이후 추가 가입하여 이용하는 서비스 등)의 경우, 개별 서비스에 대해 별도 수신 동의를 받을 수 있으며, 이때에도 수신 동의에 대해 별도로 안내하고 동의를 받습니다.</dd>
+        </dl>
+      </article>
+      <div class="btn group">
+        <button type="reset">취소</button>
+        <button type="submit">확인</button>
+        <button>전체선택</button>
+      </div>
+    </form>
+    <footer>
+      <p>회사, 동아리 등 단체에서 사용할 ID가 필요하세요?<br>
+      <a href="#"> 단체 회원 가입</a></p>
+      <table cellpadding="5">
+        <!-- tr>td*5>a[href=#]   ctrl+e -->
+        <tr>
+          <td><a href="#">이용약관</a></td>
+          <td><a href="#"><strong>개인정보처리방침</strong></a></td>
+          <td><a href="#">책임의 한계와 법적고지</a></td>
+          <td><a href="#">회원정보 고객센터</a></td>
+        </tr>
+      </table>
+      <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+        <li><a href="#">책임의 한계와 법적고지</a></li>
+        <li><a href="#">회원정보 고객센터</a></li>
+      </ul>
+      &copy;NAVER Corp.
+
+    </footer>
+  </body>
+</html>

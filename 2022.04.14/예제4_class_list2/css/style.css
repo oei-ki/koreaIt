@@ -1,0 +1,21 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+html,body {height: 100%;}
+li {list-style: none;}
+button {border: 0; background: none;}
+button,input {outline: none;}
+
+#sideMenu {
+  position: fixed;
+  background: green;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  width: 300px;
+  z-index: 10;
+  transition: 1s;
+}
+
+#sideMenu.on {
+  right: 0;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>  <!--웹 문서의 유형을 지정 선언을 해줘야 함--><!--html+엔터 자동생성-->
+<html lang="en" dir="ltr">
+  <head> <!--  자식요소들은 들여쓰기로 입력      ctrl+a 뷰티패키지단축-->
+    <meta charset="utf-8">
+    <title>html 구조
+    </title>
+  </head>
+  <body>
+    <header> <!-- 하나만 존재하지 않을 수 있(일반태그지만 헤더)부모요소는 바디   -->
+      <h1>html 이란 무엇인가?</h1> <!-- h1은 페이지당 한개를 권장함 (크기조절 가능 순서에 맞춰 사용 -->
+
+      <h2>html의 구조와 tag에 대해서 알아본다.</h2>
+    </header>
+    <div id="container">  <!--  div==main ************  -->
+
+<!---->
+
+      <article>   <!-- ex)문서, 블로그글,매거진-독립적으로 구분-article -->
+        <h3>html의 정의</h3>
+        <section>   <!--HTML 문서의 독립적인 구획-->
+          <p><!--strong는 b와 같아보이지만 음성강조가 있 --->
+            <strong>html은 프로그래밍 언어가 아닙니다.</strong>컨텐츠의 구조를 정의하는 마크업 언어입니다.<br>html은 컨텐츠의 서로 다른 부분들을 씌우거나(wrap) 감싸서 다른 형식으로 보이게 하거나 특정한 방식으로 동작하도록 하는 일련의 요소로 이루어져 있습니다.
+            <a href="https://developer.mozilla.org/ko/docs/Web/HTML" target="_blank">html 더 알아보기</a>  <!--blank 새창 -->
+          </p>
+          <img src ="./images/html_image_01.png" title ="html정의 이미지1" alt="이미지가 없습니다." > <!--alt 이미지대체테스트(오류텍스트)-->
+        </section>
+        <h3>일련의 요소(elements)의 예</h3>
+        <section>
+            <p>tag로 감싸는 단어나 이미지를 다른 어딘가로 하이퍼링크하거나 단어들을 이텔릭체로 표시하고 글씨체를 크게 또는 작게 만드는 등의 일을 할 수 있습니다. </p>
+            <img src ="./images/html_image_02.png" title ="html정의 이미지2" alt="이미지가 없습니다." >
+        </section>
+      </article>
+      <article>
+        <h3>tag의 종류</h3>
+        <section>
+          <p>html, div, head, body, header, section, article, h1~h2, footer</p>
+        </section>
+          <h3>일련의 요소(elements)의 예</h3>
+          <section>
+
+            <p>tag로 감싸는 것으로 단어나 이미지를 다른 어딘가로 하이퍼링크하거나 단어들을 이텔릭체로 표시하고 글씨체를 크게 또는 작게 만드는 등의 일을 할 수 있습니다. </p>
+          </section>
+      </article>
+      <article>
+        <h3>관련사이트</h3>
+        <!-- <ul>
+          <li><a href="#"></a></li>
+        </ul>                          unordered list--><!--ul과 li는 세트<>--><!--shift+/ = 주석처리   -->
+
+
+
+        <ul>  <!--ul 일반적으로 사용하는 목 -->
+          <li><a href="#">html_site01</a></li>
+          <li><a href="#">html_site02</a></li>
+          <li><a href="#">html_site03</a></li>
+          <li><a href="#">html_site04</a></li>
+          <li><a href="#">html_site05</a></li>
+        </ul>
+        <!-- 중괄호는 텍스트입력자리 -->
+        <!-- ul>li*5>a[href=#]{html_site0$}입력하고 ctrl+e 누르면 산식만큼 입력됨-->
+        <ol>    <!--ol 순서있는 목록을 만들때 사용-->
+          <li><a href="#" target="_blank">ol list01</a></li>
+          <li><a href="#" target="_blank">ol list02</a></li>
+          <li><a href="#" target="_blank">ol list03</a></li>
+          <li><a href="#" target="_blank">ol list04</a></li>
+          <li><a href="#" target="_blank">ol list05</a></li>
+        </ol>
+      </article>
+
+    </div>
+    <footer>2022 Design By aa &copy; copyright All right reserved</footer> <!---->
+  </body>
+</html>

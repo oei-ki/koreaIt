@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* //general ui */
+body{
+  background : #f5f5f5;
+}
+/*input default style*/
+input {
+  padding: 9px 10px 9px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+/*input size  type*/
+input.big {
+  width: 478px;
+}
+
+input.middle {
+  width: 280px;
+}
+
+input.small {
+  width: 150px;
+}
+
+input.tiny {
+  width: 100px;
+}
+
+input:focus {  /*가상요소,클릭시변화*/
+  outline: none;
+  border: 1px solid #9d9d9d;
+}
+
+/*check box lable style*/
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {
+  position: relative; /*가상요소를 줘서 디자인 할거라*/
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../img/m_check_off_24.png');
+  background-size: 24px 24px;
+}
+
+input[type=checkbox]:checked + label::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left:0;
+  /* padding: 3px; ==width: 6px; height: 7.5px;*/
+  background-image: url('../img/m_chcek_on_s_20.png');
+  background-size: 24px 24px;
+}
+
+/*button style*/
+button {
+  display: list-item;
+  background-color: transparent; /*투명도?*/
+  background-image: none;
+  border: none;
+  box-sizing: border-box;
+} /*버튼박스디자인 없앰*/
+
+button:focus {
+  outline:none;
+}
+
+.gbtn {
+  padding: 9px 15px;
+}
+
+.gbtn.normal {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 15px;
+  min-width: 110px;
+  background-color: #333;
+}
+/*button color type*/
+.gbtn.gray {
+  background-color: #818286;
+}
+
+.gbtn.transparent {
+  color: #000;
+  border: 1px solid #999;
+  background-color: transparent;
+}
+
+.gbtn.transparent:focus { /*버튼 클릭시 색 변화*/
+  border: 1px solid #333;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.table-a {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+.table-a tr td {
+  position: relative;
+  display: block;
+  padding: 14px 8px 14px;
+  font-size: 14px;
+}
+
+.table-a td > * {
+  float: left;
+   } /* *==모두 */
+
+.table-a tr td:nth-child(1) {
+  width: 120px;
+  padding-left: 20px;
+  color: #333333;
+}
+
+.table-a td > i {
+  margin: 5px 5px;
+}
+
+.table-a tr td em {
+  position: absolute;
+  display: inline-block;
+  font-size: 8px;
+  color: #f82828;
+  left:0;
+}
+
+.txt {
+
+  width: 460px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+  padding-left: 29px;
+  line-height: 21px;
+  font-weight: bold;
+}
+.txt.underline {
+  text-decoration: underline;
+}
+
+/* //general ui */
+
+#content {
+  width: 460px;
+  margin: 0 auto;
+}
+
+#wrap {
+  max-width: 768px;
+  min-width: 460px;/*컨텐츠가 없더라도 최소768px을 유지하겠 */
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+#wrap .title {
+  position: relative;
+  padding: 60px 0 54px;
+}
+
+#wrap .title h1 {
+  display: block;
+  font-size: 40px;
+  line-height: 1;
+  color: #03c75a;;
+  font-weight: 900;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.terms_box {
+  position: relative;
+  overflow: auto;
+  height: 88px;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #dadada;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.box {
+  display: block;
+  padding-top: 30px;
+}
+
+input + .gbtn {
+  margin-left: 5px;
+}

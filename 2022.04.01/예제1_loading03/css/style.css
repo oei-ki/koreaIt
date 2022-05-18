@@ -1,0 +1,76 @@
+@charset "UTF-8";
+body { background: #000000;}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text {
+  from {
+    color: #000000;
+  }
+  to {
+    color: white;
+  }
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 16px;   기본사이즈*/
+  width: 60px;
+  height: 60px;
+  /* line-height: 60px;
+  text-align: center;   display:flex와 같은*/
+}
+
+#spinner p {
+  font-size: 12px;
+  color: white;
+  animation-name: text;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#spinner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(110,240,50,.3);
+  border-top-color: rgba(110,240,50,1);
+  border-radius: 100%;
+  animation-name: spinner;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#spinner div:nth-of-type(1) {
+  width: 120%;
+  height: 120%;
+  animation-delay: 0.5s;
+}
+
+#spinner div:nth-of-type(2) {
+  width: 80%;
+  height: 80%;
+}
+
+#spinner div:nth-of-type(3) {
+  animation-delay: 0.2s;
+}

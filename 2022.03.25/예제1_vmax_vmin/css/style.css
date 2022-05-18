@@ -1,0 +1,11 @@
+@charset "UTF-8";
+html,body {height: 100%;}
+
+#container {
+  display: inline-block;
+  width: 100vmin;
+  height: 100vmin;
+  background: green;
+}
+/*vmin화면 높이,넓이 중 작은 값을 가져옴*/
+/*vmax*/

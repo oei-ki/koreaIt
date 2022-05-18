@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*
+css 변수 선언 방식
+ :root{
+ --height: 50px;
+ }
+ */
+$height: 50px;
+$boxSizes: 100,200,300;
+*{  margin: 0; padding: 0;}
+a {text-decoration: none;color: white;}
+ul,li {
+  list-style: none;
+}
+#header {
+  height: $height;
+  /*
+  css 변수 적용방식
+  height: var(--height);
+  */
+  background: skyblue;
+  overflow: hidden;
+  h1 {
+    line-height: $height;
+    float: left;
+  }
+  #gnb {
+    float: right;
+    ul{
+      overflow: hidden;
+      li{
+        float: left;
+      }
+        a {
+          line-height: $height;
+        }
+      }
+    }
+  }
+
+/*box layout*/
+// .box:nth-child(1) {
+//   width: 100px;
+//   height: 100px;
+// }
+// .box:nth-child(2) {
+//   width: 200px;
+//   height: 200px;
+// }
+// .box:nth-child(3) {
+//   width: 300px;
+//   height: 300px;
+// }
+@mixin common-box {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid #dddddd;
+}
+@each $size in $boxSizes {
+  .box-#{$size}/*임의*/ {
+    @include common-box;
+    width: #{$size}px;
+    height: #{$size}px;
+  }
+}

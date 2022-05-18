@@ -1,0 +1,15 @@
+@charset "UTF-8";
+#header {
+  border-bottom: 1px solid red;
+  /* padding: 0 0 0 0 ;     /*탑기준으로 시계방향*/
+  padding: 0 15px ;     /*좌우*/
+  /* padding: 0 0   ;    /*상하*/
+  overflow: hidden;
+}
+#gnb {
+  float: left;
+}
+
+#gnb ul {
+  
+}

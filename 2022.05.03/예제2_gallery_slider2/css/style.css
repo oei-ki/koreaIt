@@ -1,0 +1,81 @@
+@charset "UTF-8";
+*{ box-sizing: border-box; margin: 0; padding: 0;}
+html,body { height: 100%;}
+ul,ol { list-style: none;}
+a { color: #666; text-decoration: none;}
+
+#container {  /*overflow: hidden; 주면 버튼이 가려짐*/
+  width: 600px;
+  margin: 20px auto;
+}
+
+#navi {
+  width: 600px;
+  overflow: hidden;
+}
+
+#navi ul li {
+  width: 120px;
+  float: left;
+}
+
+#navi ul li img {
+  width: 100%;
+  border: 3px solid white;
+}
+
+#navi .page-wrap { /*.page-wrap 초기 너비 값을 설정, 이미지 600*3 = 1800*/
+  width: 1800px;
+}
+
+#navi .page-wrap .page {
+  float: left;
+}
+
+.navi-wrap {
+  position: relative;
+}
+
+.navi-wrap .btn-box {
+  position: absolute;
+  width: 24px;
+  height: 48px;
+  top: 50%;
+  z-index: 500;
+  overflow: hidden;
+  /* background: red; */
+}
+
+.navi-wrap .btn-box img { /*바로 밑에 형제요소?*/
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  /* clip: rect(0px,24px,48px,0px); */
+}
+
+.navi-wrap .btn-box:nth-of-type(2) {
+  right: -5px;
+  transform: translate(100%, -50%);
+}
+
+.navi-wrap .btn-box:nth-of-type(3) {
+  left: -5px;
+  transform: translate( -100%, -50%);
+}
+
+.navi-wrap .btn-box:nth-of-type(2) img {
+  left: auto;
+  right: -10px;
+}
+
+#main {
+  position: relative;
+  width: 600px;
+  height: 452px;
+}
+
+#main img {
+  position: absolute;
+  width: 100%;
+  border: 3px solid white;
+}

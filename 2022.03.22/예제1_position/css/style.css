@@ -1,0 +1,71 @@
+@charset "UTF-8";
+.wrap-box {
+  position: relative;
+  margin-top: 500px;
+  width: 800px;
+  height: 800px;
+  background: gray;
+
+}
+
+
+.box {
+  /*position: relative;*/ /*초기영역을 유지한다.*/
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  background: red;
+  top: -100px;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+
+}
+
+.box.rel {
+  position: relative; /*초기영역을 유지한다.*/
+}
+
+.box.abs {
+  position: absolute; /*부모 요소 중 static이 아닌 position 속성을 갖고 있는 요소를 기준으로 위치 값을 갖는다*/
+  top: 0;
+}
+
+.box.abs:nth-child(1) {
+  z-index: 2; /*z축의 순서 높을수록 위쪽에 배치됨*/
+  top: 50px;
+  left: 50px;
+  border-radius: 100%;
+}
+.box.abs:nth-child(2) {
+  z-index: 0;
+  top: 100px;
+  left: 100px;
+  background: blue;
+  border-radius: 100%;
+}
+.box.abs:nth-child(3) {
+  z-index: 4;
+  top: 150px;
+  left: 500px;
+  background: yellow;
+  border-radius: 100%;
+}
+.box.abs:nth-child(4) {
+  z-index: 3;
+  top: 200px;
+  left: 200px;
+  background: green;
+  border-radius: 100%;
+}
+.box.abs:nth-child(5) {
+  z-index: 1;
+  top: 250px;
+  left: 250px;
+  background: purple;
+  border-radius: 50%;
+}
+
+/* .box.abs:nth-child(1) {
+  z-index: 5;
+} */

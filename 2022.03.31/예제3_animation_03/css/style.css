@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+div {
+  position: relative;
+  width:100px;
+  height: 100px;
+  background: red;
+  animation-name: fillmodecheck;
+  animation-duration: 3s;
+  /* animation-delay: 3s; */
+  animation-fill-mode: forwards; /*마지막 프레임의 상태를 유지*/
+  animation-fill-mode: backwards; /*첫번째 프레임상태 유지하다가 진행*/
+  animation-fill-mode: both; /*첫번째 프레임의 상태를 유지하다가 진행 마지막상태유지*/
+}
+
+
+@keyframes fillmodecheck {
+  from {
+    top:0; background: yellow;
+  }
+
+  to {
+    top:300px; background: blue;
+  }
+}

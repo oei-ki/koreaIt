@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>NAVER</h1>
+      <div id="content">
+        <form>
+          <table class="table-a">
+            <tr>
+              <td>아이디</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="middle"> <span class="url">@naver.com</span> </td>
+            </tr>
+            <tr>
+              <td>비밀번호</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="middle" ></td>
+            </tr>
+            <tr>
+              <td>비밀번호 재확인</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="middle"></td>
+            </tr>
+            <tr>
+              <td>이름</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="middle"></td>
+            </tr>
+            <tr>
+              <td>생년월일</td>
+            </tr>
+            <tr>
+              <td><input type="text" class="tiny" placeholder="년(4자)">
+                <select class="month" name="month">
+                  <option value="">월</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                  <option value="">6</option>
+                  <option value="">7</option>
+                  <option value="">8</option>
+                  <option value="">9</option>
+                  <option value="">10</option>
+                  <option value="">11</option>
+                  <option value="">12</option>
+                </select>
+                <input type="text" class="tiny" placeholder="일"></td>
+              </tr>
+              <tr>
+                <td>성별</td>
+              </tr>
+              <tr>
+                <td>
+                  <select class="gender" name="gender">
+                    <option value="">성별</option>
+                    <option value="">여자</option>
+                    <option value="">남자</option>
+                    <option value="">선택안함</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>본인 확인 이메일<span>(선택)</span></td>
+              </tr>
+              <tr>
+                <td><input type="text" class="middle" placeholder="선택입력"></td>
+              </tr>
+              <tr>
+                <td>휴대전화</td>
+              </tr>
+              <tr>
+                <td>
+                  <select class="call" name="call">
+                    <option value="">대한민국 +82</option>
+                    <option value="">대한민국 +82</option>
+                    <option value="">대한민국 +82</option>
+                    <option value="">대한민국 +82</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" class="small" placeholder="전화번호 입력">
+                  <button class="gbtn to">인증번호 받기</button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" class="middle" placeholder="인증번호 입력하세요" disabled></td>
+              </tr>
+            </table>
+              <button class="gbtn gray">가입하기</button>
+          </form>
+      </div>
+      <div id="footer">
+        <table>
+          <tr>
+            <td>이용약관</td>
+            <td>개인정보처리방침</td>
+            <td>책임의 한계와 법적고지</td>
+            <td>회원정보 고객센터</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+<!--table 사이에 div등 정해진 태그말고 삽입 금지-->

@@ -1,0 +1,218 @@
+@charset "UTF-8";
+:root {  /*root=최상위에서 선언하겠다*/
+  --content-width: 1320px;   /*--임의의 글자임(정해진거x)/글자와 글자사이는 - 로 구분*/
+}
+/*공통ui*/
+a.common-btn {
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  font-size: 20px;
+  color: white;
+  line-height: 60px;
+  border-radius: 5px;
+  background: #0055b8;
+}
+/*메인배너*/
+#mainbanner {
+  background-image: url('../img/main_banner_bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%; /*좌우 오토 높이값만 100vh맞춤/ 가운데 정렬에 맞춰짐?*/
+}
+
+#mainbanner .inner {
+  position: relative;
+  width: var(--content-width);
+  height: 100vh;
+  margin: 0 auto; /*가운데 정렬*/
+}
+
+#mainbanner .maintext {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  min-height:254px;
+  top: calc( 50% - 207px );
+}
+
+/*메인배너 메인타이틀*/
+#mainbanner .maintext p.maintitle {
+  font-size: 50px;
+  line-height: 60px;
+  color: #333333;
+}
+
+/*메인배너 서브타이틀*/
+#mainbanner .maintext p.subtitle {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #666666;
+}
+
+#mainbanner .maintext a.common-btn {
+  margin-top: 39px;
+}
+
+#wrap {
+  width: var(--content-width);
+  margin: 0 auto;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+/*상단 고정형 메뉴*/
+#header {
+  position: fixed; /*고정해줘야함*/
+  width: var(--content-width);
+  top: 0;
+  overflow: hidden;/*float때문*/
+  /* background: red; */
+  padding: 45px 25px 0;
+  box-sizing: border-box;
+}
+
+#logo{ float: left;}  /*이거 정렬해줘야 밑의 글이랑 한줄로 됨*/
+
+#wrap .inner {
+  float: right;
+}
+
+#header .inner #gnb {
+  margin-right: 103px;
+}
+
+#header .inner #gnb li {
+  margin-right: 47px;
+}
+
+#header .inner #login-menu li {
+  margin-right: 30px;
+}
+/*gnb,login menu 메뉴간격 삭제*/
+#header .inner #login-menu li:last-child, #header .inner #gnb li:last-child {
+  margin-right: 0;
+}
+
+#header .inner > ul {
+  float: left;
+  overflow: hidden;
+}
+
+#header .inner > ul > li {
+  float: left;
+  height: 20px;
+  font-size: 20px;
+}
+
+#header .inner > ul > li > a {
+  line-height: 20px;
+}
+
+#header .inner #login-menu li span.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  float: right;
+  font-size: 14px;
+  color: white;
+  border-radius: 100%;
+  background: #ffc01d;
+  margin-left: 4px;
+}
+
+/*컨텐츠 영역*/
+#container section .inner {
+  width: var(--content-width);
+  min-height: 650px;
+  margin: 0 auto; /*가운데 정렬*/
+  text-align: center;
+}
+
+/* #container section:nth-of-type(odd) .inner {
+  background: green;
+}
+
+#container section:nth-of-type(even) .inner {
+  background: blue;
+} */
+#container section:nth-child(1) .inner {
+  min-height: 652px;
+  padding-top: 165px;
+  box-sizing: border-box;
+}
+
+#container section:nth-child(2) {
+  background: #f9f9f9;
+}
+
+#container section:nth-child(2) .inner {
+  min-height: 652px;
+  padding-top: 146px;
+  box-sizing: border-box;
+}
+
+#container section:nth-child(4) {
+  background: #f9f9f9;
+}
+
+#container section:nth-child(5) {
+  background: #1d314a;
+}
+
+#container section .inner .box-wrap ul{
+  overflow: hidden;
+}
+
+#container section .inner .box-wrap li {
+  float: left;
+  box-sizing: border-box;
+  width: 25%;
+  padding: 0 20px;
+}
+
+#container section .inner .box-wrap li .items {
+  border: 1px solid #e3e3e3;
+  min-height: 270px;
+  box-sizing: border-box;
+  padding: 45px 55px;
+}
+
+#container section .inner .box-wrap .items h3 {
+  font-size: 20px;
+  color: #252525;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+#container section .inner .box-wrap .items p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+#container section .inner .box-wrap .items img {
+  opacity: 0.8;
+}
+
+/*제휴회사 레이아웃*/
+#container section .inner .thumb-img-wrap {}
+#container section .inner .thumb-img-wrap  div {
+  background: red;
+}
+/*second*/
+#container section .inner h2 {
+  font-size: 45px;
+  line-height: 1; /*텍스트의 줄간*/
+  color: #333333;
+  margin-bottom: 21px;
+}
+
+#container section .inner .subtitle {
+  font-size: 24px;
+  line-height: 36px;
+  color: #666666;
+}

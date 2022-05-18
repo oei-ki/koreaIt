@@ -1,0 +1,187 @@
+@charset "UTF-8";
+/* //general ui */
+
+/*input default style*/
+input {
+  padding: 9px 10px 9px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+/*input size  type*/
+input.big {
+  width: 478px;
+}
+
+input.middle {
+  width: 280px;
+}
+
+input.small {
+  width: 150px;
+}
+
+input.tiny {
+  width: 100px;
+}
+
+input:focus {  /*가상요소,클릭시변화*/
+  outline: none;
+  border: 1px solid #9d9d9d;
+}
+
+/*check box lable style*/
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {
+  position: relative; /*가상요소를 줘서 디자인 할거라*/
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #999;
+  margin: 5px 0 0 12px;''
+}
+
+input[type=checkbox]:checked + label::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 6px;
+  height: 7.5px;
+  top: 0;
+  left:0;
+  /* padding: 3px; ==width: 6px; height: 7.5px;*/
+  border-style: solid;
+  border-color: #000;
+  border-width: 0 3px 3px 0;
+  top: calc( 50% - 1.5px );
+  left:50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  /*transform: translate(-50%,-50%) rotate(45deg) ;*/ /*순서 로테이트를 먼저 사용시 xy축 바뀐상태로 위치이동*/
+} /*translate(-50%) 본인의 몸의 반*/
+
+/*button style*/
+button {
+  display: list-item;
+  background-color: transparent; /*투명도?*/
+  background-image: none;
+  border: none;
+  box-sizing: border-box;
+} /*버튼박스디자인 없앰*/
+
+button:focus {
+  outline:none;
+}
+
+.gbtn {
+  padding: 9px 15px;
+}
+
+.gbtn.normal {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 15px;
+  min-width: 110px;
+  background-color: #333;
+}
+/*button color type*/
+.gbtn.gray {
+  background-color: #818286;
+}
+
+.gbtn.transparent {
+  color: #000;
+  border: 1px solid #999;
+  background-color: transparent;
+}
+
+.gbtn.transparent:focus { /*버튼 클릭시 색 변화*/
+  border: 1px solid #333;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.table-a {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-a tr td {
+  position: relative;
+  border: 1px solid #dddddd;
+  border-left:0;
+  border-right: 0;
+  padding: 14px 8px 14px;
+  font-size: 14px;
+}
+
+.table-a td > * { float: left; } /* *==모두 */
+
+.table-a tr td:nth-child(1) {
+  width: 120px;
+  padding-left: 20px;
+  color: #333333;
+}
+
+.table-a td > i {
+  margin: 5px 5px;
+}
+
+.table-a tr td em {
+  position: absolute;
+  display: inline-block;
+  font-size: 8px;
+  color: #f82828;
+  left:0;
+}
+
+.txt {
+  display: inline-block;
+  font-size: 14px;
+  color: #999999;
+  margin: 5px 0 0 5px;
+  line-height: 25px;
+}
+/* //general ui */
+
+#wrap {
+  max-width: 980px;
+  min-width: 768px;/*컨텐츠가 없더라도 최소768px을 유지하겠 */
+  margin: .0 auto;
+}
+
+#wrap .title {
+  position: relative;
+  padding: 10px 0 0;
+  border-bottom: 2px solid #333333;
+}
+
+#wrap .title h1 {
+  display: inline-block; /*앞쪽으로 붙임*/
+  font-size: 25px;
+  line-height: 1;
+  color: #333333;
+}
+
+#wrap .title .prec {
+  float: right;
+  height: 25px;
+  line-height: 25px;
+  padding: 0;
+  color: #666666;
+}
+
+#wrap .title .prec em {
+  font-size: 8px;
+  color: #f85858;
+  margin-right: 5px;
+}
+
+input + .gbtn {
+  margin-left: 5px;
+}

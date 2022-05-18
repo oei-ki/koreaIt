@@ -1,0 +1,277 @@
+@charset "UTF-8";
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+}
+
+input[type="checkbox"]#gnbcheck {
+  display: none;
+}
+
+#gnbbtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  /* background: red; */
+  z-index: 800;
+  display: none;
+}
+
+#gnbbtn > span {
+  position: absolute;
+  top: 16px;
+  height: 1.6px;
+  width:100%;
+  transform: translateY( -50% ); /*본인몸의 반만큼*/
+  background: #fff;
+}
+
+#gnbbtn > span:nth-child(1) {
+  top: 8px;
+}
+
+#gnbbtn > span:nth-child(3) {
+  top: 24px;
+}
+
+/* #gnbbtn span {
+  border-bottom: 1.6px solid white;
+  width: 32px;
+  float: left;
+  padding-bottom: 5px;
+} */
+
+/* 전제레이아웃 */
+.wrap {
+  position: relative;
+  width: 100rem;
+  min-width: 230px;
+  margin: 0 auto;
+  background: yellow;
+}
+
+/* 상단영역 */
+.header {
+  position: relative;
+  height: 10rem; /*==100px*/
+  background: skyblue;
+}
+
+.logo {
+  position:absolute;
+  display: block;
+  width: 15rem; /*==150px*/
+  height: 10rem;
+  left: 0;
+  top: 0;
+  color: #fff;
+  line-height: 10rem;
+  text-align: center;
+  background: #000;
+  text-transform: uppercase;
+}
+
+.logo:hover {
+  color: yellow;
+}
+
+/* 메인메뉴 */
+.gnb {
+  position: absolute;
+  right:1rem;
+  top: 2rem;
+
+}
+
+.mainmenu {
+  position: relative;
+  width: 80rem;
+  height: 6rem;
+  background: #000;
+  /* overflow: hidden; */
+}
+
+.mainmenu > li {
+  position: relative;
+  width: 25%; /*4개*/
+  float: left;
+}
+
+.mainmenu > li > a {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 6rem; /*메인메뉴 높이*/
+  text-align: center;
+  text-transform: uppercase;
+  transition: background .5s; /*자연스럽게 만듬*/
+  z-index: 800;
+}
+
+.mainmenu > li:hover > a {
+  background: #f00f00;
+}
+
+.mainmenu > li:hover > .submenu { /*대분류에 마우스 올렸을 때*/
+  display: block;
+  animation-name: ani;
+  animation-duration: 0.5s;
+  transform-origin: top;
+}
+
+/* .gnb:hover .submenu {
+  display: block;
+}
+.mainmenu:hover > li > .submenu {
+  display: block;
+}   전체 노출
+*/
+
+.submenu {
+  position: relative;
+  background: #000000;
+  display: none;
+  z-index: 500;
+}
+
+.submenu a {
+  display: block;
+  line-height: 4rem;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  transition: background .5s;
+
+}
+
+.submenu li a:hover {
+  background: #f00f00;
+}
+
+@keyframes ani {
+  from {
+    opacity: 0;
+    /* transform: scaleY(0); */
+    top:-15%;
+  }
+  to {
+    opacity: 1;
+    /* transform: scaleY(1); */
+    top:0;
+  }
+}
+/*메인영역*/
+.main {
+  position: relative;
+}
+
+.slide {
+  position: relative;
+  height: 30rem;
+  background: orange;
+}
+
+.board {
+  position: relative;
+  background: green;
+  overflow: hidden;
+}
+
+.board > div {
+  position: relative;
+  width: 33.33%;
+  height: 20rem;
+  float: left;
+}
+
+.notice {
+  background: rgba( 0,0,0 ,.5);
+}
+
+.gallery{
+  background: rgba( 0,0,0 ,.1);
+}
+.banner {
+  background: rgba( 0,0,0 ,.8);
+}
+/*하단영역*/
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.f-left {
+  position: relative;
+  width: 15%;
+  height: 10rem;
+  color: #fff;
+  float: left;
+  background: #000;
+}
+
+.f-right {
+  position: relative;
+  width: 85%;
+  height: 10rem;
+  float: left;
+  background: gray;
+}
+
+.f-menu {
+  position: relative;
+  height: 5rem;
+  background: rgba(255,255,255,.5);
+}
+
+.f-copy {
+  position: relative;
+  height: 5rem;
+  background: rgba(255,255,255,.7);
+}
+
+/* 반응형 코드 */
+@media all and (max-width: 1200px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+
+}
+
+@media all and (max-width: 960px) {
+  #mobile-close-btn {
+    display: block;
+  }
+  #gnbbtn {
+    display: block;
+  }
+  input[type=checkbox]#gnbcheck:checked ~ .header .gnb {
+    left: 0;
+  }
+  .gnb {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    width: 80%;
+    left: -100%;
+    background: rgba(0,0,0,.8);
+    transition: .5s ease-in-out;
+    z-index: 900;
+  }
+  .gnb ul.mainmenu {
+    padding-top: 50px;
+    width: 100%;
+  }
+  .gnb ul.mainmenu li {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+  }
+}

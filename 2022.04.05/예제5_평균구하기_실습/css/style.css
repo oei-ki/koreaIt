@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.age {
+  border-collapse: collapse;
+  width: 500px;
+}
+
+.age tr:nth-child(1) > td {
+  font-weight: bold;
+  text-align: center;
+}
+
+.age tr td {
+  border: 1px solid black;
+}

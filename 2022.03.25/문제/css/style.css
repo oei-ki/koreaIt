@@ -1,0 +1,51 @@
+@charset "UTF-8";
+html,body { height: 100%; } /*모바일할때 기본세 팅*/
+
+body {
+  background: black;
+}
+
+#wrap {
+  display: flex; /*유연성있게 정렬?뭔말*/
+  justify-content: center; /*좌우정렬*/
+  align-items: center; /*vertical-align=center;과 같은 효과*/
+  height: 100vh
+}
+
+#wrap::before {
+  content: 'test';
+  font-size: 2em;
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+   body {background: red;}
+   #wrap::before {
+     content: 'middle ';
+     color: white;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+   body {background: blue;}
+   #wrap:before {
+     content: 'desktop';
+     color: white;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   body {background: green;}
+   #wrap::before {
+     content: 'pad';
+     color: white;
+   }
+}
+
+@media screen and (max-width: 380px) {
+   body {background: yellow;}
+   #wrap::before {
+     content: 'mobile';
+     color: black;
+   }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>  <!--html+엔터 자동생성-->
+<html lang="ko" >
+  <head>
+    <meta charset="utf-8">
+    <title>input number</title>
+  </head>
+  <body>
+    <h1>select device</h1>
+    <form method="get"> <!--action 입력값을 넘겨줄 주소?/ -->
+      <select id="kind" name="kind">
+        <option value="phone">phone</option>
+        <option value="tablet">tablet</option>
+      </select>
+               <!--Class로 입력하면 중복되어 오류가 나타날 수 있 -->
+     <select id="kindofdevice" name="kindofdevice">
+        <optgroup label="iphone">
+          <option value="galaxy">galaxy</option>
+          <option value="iphone">iphone</option>
+          <option value="googlephone">googlephone</option>
+        </optgroup>
+        <optgroup label="tablet">
+          <option value="galaxytab" selected>galaxytab</option> <!--selected 옵션보이는 화면에 고정된 옵션-->
+          <option value="ipad">ipad</option>
+        </optgroup>
+      </select>
+      <input id="quantity" type="number" name="quantity" mim="1" max="100" step ="2" value="0">
+      <button type="submit">구매하기 </button> <!--submit - 던져주는 역할?제출-->
+    </form>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* body {
+  background: linear-gradient( #42f5dd, #f542b3 );
+} */
+h2 {
+  margin: 30px 0;
+  /* padding: 30px 0; */
+  color: #333333;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: #666666;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h4 {
+  margin: 0 0 5px;
+  color: #666666;
+}
+
+#wrap {
+  display: inline-block;
+  width: 100%;
+  min-height: 100vh; /*100vh화면꽉차게 함*/
+  text-align: center;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(196,175,55,1) 0%, rgba(69,223,167,1) 54%, rgba(196,212,80,1) 88%);
+}
+
+.items {
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative; /*자기자신을 기준으로 만듬*/
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch .slider {
+  position: absolute; /*relative기준*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* top: 0;     위랑 같음
+  left: 0;
+  width: 100%;
+  height: 100%; */
+  background: #f1f1f1;
+  box-shadow: inset 0px 0px 5px rgba(0,0,.2);
+  /*box-shadow: {x축} {y축} {퍼짐정도}{색상}; inset: innershadow*/
+  overflow: hidden;
+  transition: .5s; /*색상변화*/
+}
+
+.switch .slider::before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px; /*34-26=8 상하여백8*/
+  top: 4px;
+  left: 4px;
+  background : white;
+  box-shadow: 0px 0px 5px rgba(0,0,0,2);
+  transition: 0.5s;
+}
+
+/*round type*/
+.switch.round .slider {
+  border-radius: 17px;  /*34/2*/
+}
+
+
+.switch.round.big .slider {
+  border-radius: 19px;
+}
+
+.switch.round .slider:before {
+  border-radius: 100%;
+}
+
+/*size type*/
+/*big*/
+.switch.big {
+  width:64px;
+  height: 38px;
+}
+
+.switch.big .slider:before {
+  width: 30px;
+  height: 30px;
+}
+
+
+/*medium*/
+.switch.medium {
+  width:56px;
+  height: 30px;
+}
+
+.switch.medium .slider:before {
+  width: 22px;
+  height: 22px;
+}
+
+/*small*/
+.switch.small {
+  width:52px;
+  height: 26px;
+}
+
+.switch.small .slider:before {
+  width:18px;
+  height: 18px;
+}
+
+/*tiny*/
+.switch.tiny {
+  width:48px;
+  height: 22px;
+}
+
+.switch.tiny .slider:before {
+  width:14px;
+  height: 14px;
+}
+
+/*color type botton*/
+/*green*/
+.switch.green > input:checked + .slider {
+  background: green;
+}
+
+/*red*/
+.switch.red > input:checked + .slider {
+  background: red;
+}
+
+/*yellow*/
+.switch.yellow > input:checked + .slider {
+  background: yellow;  /*ctrl+shift 동시선택가능*/
+}
+
+/*switch button 작동*/
+.switch > input {
+  display: none;
+}
+
+.switch > input:checked + .slider {
+  background: #2196f3;
+}
+
+.switch > input:checked + .slider:before {
+  left: 30px;
+}

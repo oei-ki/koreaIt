@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+/*상단으로 이동 버튼*/
+#go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #f1f1f1;
+  border-radius: 100%;
+  overflow: hidden;  /*바깥쪽으로 넘치는부분 자름*/
+}
+
+#go-to-top a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/go_to_top.png');
+  background-position: center center;
+  background-color: #ffffff; /*white, rgba(255,255,255,1)와 같다*/
+}
+
+
+/* 상단 헤더 영역 */
+#header {
+  border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;   /*부모역역*/
+  padding: 0 15px;
+}
+/* 상단 로고 영역 */
+#header #logo {
+  float: left;
+}
+
+#logo h1 a {
+  line-height: 60px;
+  font-weight: 100;      /*글자굵기*/
+  font-family: 'Monoton', cursive;    /*폰트*/
+  text-transform:uppercase;    /*uppercase==대문자 / lowercase==소문자 / capitalize==첫글자대문자표기*/
+}
+/* 상단 gnb 영역 */
+#header #gnb {
+  float: right;
+}
+
+#header #gnb ul{
+  overflow: hidden;
+}
+
+#header #gnb ul li{   /*텍스트는 16px이 기본??*/
+  float: left;;            /*가로로 정렬(순서에 맞게 왼오확인)*/
+  margin-right:10px;
+  height: 60px;
+}
+
+/* #gnb ul li:nth-child(even) a { 임의의 그룹에서 네 번째에 위치하는 모든 요소 선택 /* odd : 홀수, even : 짝
+  color: red;
+} */
+/* #gnb ul li:nth-child(3n) a { /*배수 사용 시 n 사용 n:1,2,3,4....
+  color: red;
+} */
+
+#header #gnb ul li:last-child{
+  margin-right: 0;
+}
+
+#gnb ul li a {
+  line-height: 60px;   /*메뉴중간으로 맞춰줌?*/
+}
+
+/* 메인베너 */
+#mainbanner {
+  height: 850px;
+  background-image: url('../img/main_banner_img.jpg');
+  background-position: center top;
+  background-size: cover;
+}
+/*컨텐츠 영역*/
+#container {
+  width: 1200px;
+  min-height: 500px;
+  margin: 0 auto; /*정렬?*/
+}
+
+/*공통 스타일*/
+
+#container h2 {
+  text-align: center;
+  color: #666666;
+  padding: 30px 0 15px;
+  /* padding-top: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 15px; */
+  text-transform: uppercase;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 15px;
+}
+
+#container section {
+  overflow: hidden;
+}
+
+#container section .items {
+  float: left;
+}
+
+#container section .items img {
+  width: 100%;   /*부모영역에 맞춰서 크기를 조절하면서 다보이게 설정*/
+}
+
+#container section .items h3 {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 10px;
+}
+
+/* type-a */
+#container section.type-a .items {
+  /* width: calc( 25% - 40px );  /*box-sizing 속성을 사용하지 않을 때*/
+  width: 25%;            /*정렬*/
+  min-height: 100px;
+  padding: 10px 20px;
+  box-sizing:  border-box;
+  text-align: center;
+}
+
+#container section.type-a .items .bg-box {
+  height: 150px;
+  background-size: cover;
+}
+
+#container section.type-a .items:nth-child(4n+1) .bg-box{
+  background-image: url('../img/m_01.png');
+}
+#container section.type-a .items:nth-child(4n+2) .bg-box{
+  background-image: url('../img/m_02.png');
+}
+#container section.type-a .items:nth-child(4n+3) .bg-box{
+  background-image: url('../img/m_03.png');
+}
+#container section.type-a .items:nth-child(4n+4) .bg-box{
+  background-image: url('../img/m_04.png');
+}
+#container section.type-a .items:nth-child(4n+4) .bg-box{
+  background-image: url('../img/m_04.png');
+}
+
+/* type-b */
+#container section.type-b .items {
+  width: 25%;
+  text-align: center;
+}
+
+#container section.type-b .items .box {
+  min-height: 100px;
+  padding: 10px;
+  margin: 0 10px 20px;
+  border: 1px solid #f1f1f1;
+
+}
+
+
+/*하단 영역*/
+#footer {
+  text-align: center;
+  border-top: 1px solid #f1f1f1;
+  padding: 20px 0;
+  margin-top: 50px;  /*container랑 footer사이의 여백추가*/
+  background: #f9f9f9;
+}
+
+#footer .inner {
+  width: 1200px;
+  margin: 0 auto;
+}

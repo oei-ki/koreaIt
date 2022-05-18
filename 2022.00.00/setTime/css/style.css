@@ -1,0 +1,45 @@
+@charset "UTF-8";
+* {margin:  0; padding: 0;}
+html,body {height: 100%;}
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 15px black;
+}
+#txt-wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#txt {
+  position: relative;
+  top: 100px;
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#input-wrap {
+  top: 300px;
+  left: 500px;
+  position: relative;
+  display: flex;
+  height: 100px;
+  width: 200px;
+  margin: 0 auto;
+  flex-direction: column;
+  /* background: pink; */
+  /* z-index: 10000000; */
+}
+
+#inputDate {
+  margin-bottom: 10px;
+}

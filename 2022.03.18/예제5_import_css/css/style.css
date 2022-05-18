@@ -1,0 +1,6 @@
+@charset "UTF-8";
+@import "./initial.css"; /*이 방식이 아주조금 느림 큰차이 없*/
+body {background-color: purple;}
+body {background-color: red; color: white;}
+body {background-color: green;}
+body { color: yellow;}

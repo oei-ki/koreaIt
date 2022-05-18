@@ -1,0 +1,47 @@
+@charset "UTF-8";
+html,body { height: 100%;}
+img{ width: 100%; }
+#wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  width: 1200px;
+  height: 300px;
+}
+
+.content .items {
+  width: 25%;
+}
+
+.content .items .inner {
+  position: relative; /*기준이 박스안에 있어야해서..부모영역(inner)*/
+  width: 100%;
+  border: 1px solid #f1f1f1;
+  height: 295px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.content .items .inner > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  /*  ==
+  transition-duration: .5;
+  transition-property: all;
+  transition-delay: 0s;
+  transition-timing-function:  ease; */
+  transform-origin: center right; /*중심값 중심축을 두고 움직임*/
+}
+
+.content .items .inner:hover > img {
+  /* width: 120%; */
+  transform: scale(1.2, 1.2);  /*현재사이즈 1이고 1.2는 120%임*/ /*x축y축*/
+}

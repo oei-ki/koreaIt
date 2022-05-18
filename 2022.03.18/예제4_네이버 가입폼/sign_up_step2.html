@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입 step2</title>
+  </head>
+  <body>
+    <h1>naver</h1>
+    <form>
+      <table>
+        <tr>
+          <td>
+            <h3>
+              <label for="id">아이디</label>
+            </h3>
+            <input type="text" id="id" name="id" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>
+              <label for="qw">비밀번호</label>
+            </h3>
+            <input type="password" id="qw" name="qw" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>
+              <label for="reqw">비밀번호 재확인</label>
+            </h3>
+            <input type="password" id="reqw" name="reqw" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3><label for="user_name">이름</label></h3>
+            <input type="text" id="user_name" name="user_name" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>
+              <label for="year">생년월일</label>
+            </h3>
+            <div class="input-group">
+              <input type="text" id="year "name="year" maxlength="4" size="10" placeholder="년(4자)">
+              <select id="month" name="month">
+                <option value="월">월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <!-- option[value=$]*12>$ -->
+              </select>
+              <input type="text" id="date" name="date" maxlength="2" size="10"  placeholder="일">
+            </div>  <!--클래스명은 암의로 정함-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>
+              <label for="gender">성별</label>
+            </h3>
+            <!-- <input type="text" id="user" name="user"> -->
+            <select id="gender" name="gender">
+              <option value="gender">성별</option>
+              <option value="female">여자</option>
+              <option value="male">남자</option>
+              <option value="none">선택암함</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>
+              <label for="email">본인 확인 이메일<span class="select-opt-text">(선택)</span></label>
+            </h3>
+            <input type="email" id="email" name="email" placeholder="선택입력 ">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>
+              <label for="phone">휴대전화</label>
+            </h3>
+            <ul>
+              <li>
+                <select id="local-number" name="local-number">
+                  <option value="대한민국">대한민국+82</option>
+                  <option value="그레나다">그레나다1+473</option>
+                  <option value="그리스 +30">그리스 +30</option>
+                  <option value="기니 +224">기니 +224</option>
+                  <option value="뉴질랜드 +64">뉴질랜드 +64</option>
+                </select>
+              </li>
+              <li>
+                <input type="tel" id="phone" name="phone" pattern=[0-9]{3}-[0-9]{4}-[0-9]{4} placeholder="전화번호 입력">
+                <button type="submit">인증번호 받기</button>
+              </li>
+              <li>
+                <input type="text" id="auth-num" name="auth-num" maxlength="4" placeholder="인증번호를 입력하세요" disabled><!--disabled 창비활성 -->
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <button type="button">가입하기</button>
+    </form>
+    <footer>
+      <table cellpadding="5">
+        <!-- tr>td*5>a[href=#]   ctrl+e -->
+        <tr>
+          <td><a href="#">이용약관</a></td>
+          <td><a href="#"><strong>개인정보처리방침</strong></a></td>
+          <td><a href="#">책임의 한계와 법적고지</a></td>
+          <td><a href="#">회원정보 고객센터</a></td>
+        </tr>
+      </table>
+      &copy;NAVER Corp.
+    </footer>
+  </body>
+</html>

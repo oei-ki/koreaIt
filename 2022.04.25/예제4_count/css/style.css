@@ -1,0 +1,32 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body {
+  background-color : black;
+  transition: 2s;
+}
+a { color:#666;}
+
+.flex-box {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.count {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: orange;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+
+}
+
+.on {
+   transform: scale(.5);
+}

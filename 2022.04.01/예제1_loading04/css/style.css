@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+body {
+  background: #000000;
+  font-family: 'Rock 3D', cursive;
+}
+
+@keyframes spinner {
+  from {
+    transform: scale(0.8);
+    opacity: 1;
+
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes text {
+  from {
+    color: #000000;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  to {
+    color: white;
+    transform: rotate(-90deg);
+  }
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 16px;   기본사이즈*/
+  width: 60px;
+  height: 60px;
+  /* line-height: 60px;
+  text-align: center;   display:flex와 같은*/
+}
+
+#spinner p {
+  font-size: 12px;
+  color: white;
+  animation-name: text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#spinner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  animation-name: spinner;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  box-shadow: 0 0 10px rgba(255, 218, 176,.5);
+  border: 3px solid #000000;
+}
+
+#spinner div:nth-of-type(1) {
+  animation-delay: 2s;
+  border-color: #8D8DAA ;
+}
+
+#spinner div:nth-of-type(2) {
+  border-color:#F56D91 ;
+}
+
+#spinner div:nth-of-type(3) {
+  animation-delay: 1s;
+  border-color:#F7F5F2 ;
+}
+
+#spinner div:nth-of-type(4) {
+  animation-delay: 3s;
+  border-color:#8479E1 ;
+}

@@ -1,0 +1,145 @@
+@charset "UTF-8";
+.box {
+  position: absolute;
+  display: flex; /*정렬*/
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  border: 1px solid black;
+  background: green;
+  color: white;
+  border-radius: 50px;
+  box-sizing: border-box;
+  /*animation*/
+  animation-name: rotate; /*임의로, 클래스와 같음*/
+  animation-duration: 2s;
+  animation-iteration-count: infinite; /*반복횟수 설정*/
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.box:nth-child(1) {
+  transform: rotate(180deg);
+  animation-name: rotate1;
+  animation-duration: 1s;
+}
+
+.box:nth-child(2) {
+  animation-name: rotate;
+  top:100px;
+
+}
+.box:nth-child(3) {
+  top:200px;
+  animation-duration: 1s;
+  animation-name: rotate3;
+}
+.box:nth-child(4) {
+  top:300px;
+  animation-duration: 0.5s;
+  animation-name: rotate4;
+}
+.box:nth-child(5) {
+  top:400px;
+  animation-duration: 1s;
+  animation-name: rotate5;
+}
+.box h1 {
+  font-size: 14px;
+}
+
+@keyframes rotate {
+  from {
+/* 변화코드입력영역 */
+  left: 0;
+  background: yellow;
+  }
+  50% {
+    background: blue;
+    /* transform: rotate(180deg); */
+  }
+  to {
+/* 변화코드입력영역 */
+  left: 300px;
+  background: purple;
+  transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate1 {
+    from {
+  /* 변화코드입력영역 */
+    left: 0;
+    top:0px;
+    background: yellow;
+    }
+    50% {
+      background: pink;
+      /* transform: rotate(180deg); */
+    }
+    to {
+  /* 변화코드입력영역 */
+    left: 600px;
+    background: orange;
+    transform: rotate(360deg);
+    top:700px;
+    }
+}
+@keyframes rotate3 {
+from {
+      /* 변화코드입력영역 */
+  top:300px;
+  background: skyblue;
+}
+50% {
+background: pink;
+          /* transform: rotate(180deg); */
+}
+to {
+      /* 변화코드입력영역 */
+left: 300px;
+background: purple;
+transform: rotate(360deg);
+top:0px;
+}
+}
+@keyframes rotate4 {
+from {
+      /* 변화코드입력영역 */
+  background: skyblue;
+}
+50% {
+background: pink;
+          /* transform: rotate(180deg); */
+}
+to {
+      /* 변화코드입력영역 */
+left: 500px;
+background: purple;
+transform: rotate(360deg);
+}
+}
+@keyframes rotate5{
+from {
+      /* 변화코드입력영역 */
+  background: orange;
+  left: 0;
+}
+50% {
+background: pink;
+          /* transform: rotate(180deg); */
+}
+to {
+      /* 변화코드입력영역 */
+left: calc( 100% - 100px);
+background: purple;
+transform: rotate(360deg);
+}
+
+  0% {}
+  25% {}
+  50% {}
+  100%{}      /*위와같은것*/
+}

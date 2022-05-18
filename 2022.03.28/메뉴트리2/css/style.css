@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#lnb {
+  position: fixed;
+  padding: 20px;
+  width: 300px;
+  height: 100vh;
+  box-sizing: border-box; /*300??알아봐*/
+  background: #ff6a67;
+  z-index: 300; /*정해진건 아님??*/
+}
+
+#lnb h1 {
+  margin-bottom: 20px;
+}
+
+#lnb h1 a {
+  font-size: 32px;
+  color: #ffffff;
+}
+
+#container {
+  padding-left: 300px;  /*logo부분*/
+  width: 100%;
+  height: 100;
+  box-sizing: border-box;
+
+}
+
+#top-menu {
+  height: 50px;
+  overflow: hidden;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #f1f1f1;
+}
+
+#top-menu ul {
+  float: right;
+}
+
+#top-menu ul li {
+  float: left;
+  margin-left: 10px;
+
+}
+
+#top-menu ul li:first-child {
+  margin-left: 0;
+
+}
+
+#top-menu ul li  a {
+  line-height: 50px;
+}
+
+.contents {
+  padding: 50px;
+  box-sizing: border-box; /*너비를 주어서 들어가야*/
+}
+
+.contents h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background: #f1f1f1;
+}
+/*menu-tree-management customlize style*/
+.menu-tree-management {
+  background: none;
+  /*background: none; background-color: transparnt;*/
+  border: none;
+}
+
+.menu-tree-management .title {
+  color: white;
+}
+
+.menu-tree-management input[type=checkbox] + label {  /*lnb, id값을 넣으면 상위개념이라 전체가 화이트로 바뀜*/
+  color:white;
+}
+
+.menu-tree-management .table-ctn .menu-tree .sub-menu > li {
+  color:white;
+}
+
+.menu-tree-management .table-ctn .menu-tree .sub-menu > li:hover {
+  color:#1a73c4;
+}
+
+@media screen and (max-width: 1200px) { /*and 브레이크포인트*/
+  #wrap {
+    width: 100%; }
+}
+
+/* @media screen and (min-width: 500px) {
+  #wrap { width:800px; }
+} */

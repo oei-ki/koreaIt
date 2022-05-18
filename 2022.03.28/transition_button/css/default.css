@@ -1,0 +1,15 @@
+@charset "UTF-8";
+html,body { height : 100%; }
+h1,h2,h3 {
+  margin: 0; !important;
+  padding: 0;
+  line-height: 1;  /*px없이는 height의 베수  ex)height64px == line-height: 2*/
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover {
+  color: #111111;
+}
