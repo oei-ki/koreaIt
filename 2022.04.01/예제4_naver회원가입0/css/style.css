@@ -68,7 +68,7 @@ button:focus {
 .table-a {
   display: block;
   table-layout: fixed;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   vertical-align: middle; /*==flex -align-items:centet*/
 }
 
