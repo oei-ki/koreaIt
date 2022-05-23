@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.progress + .progress {
+  margin-top: 50px;
+}
+
+.toggle-btn {
+  margin-top: 50px;
+}

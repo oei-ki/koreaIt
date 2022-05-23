@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.container-fluid .col,.container .col{
+
+  color: #666;
+  text-align: center;
+}
+
+.container-fluid .row + .row {
+  margin-top: 10px;
+}
+
+.col .table + .btn {
+  float: right;
+}
+
+
+.col.text {
+  padding: 30px;
+}
+
+/* .col.text + .col-md-6.img-box{
+  padding-top: 0px;
+}
+
+.col.text + .col-auto.img-box{
+  padding-top: 20px;
+} */
+
+.col.img-box {
+  /* background-image: url("../img/thumb_nail01.jpg") ; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.container-fluid .col.img-box {
+  background-color: transparent; /*색상은 none 아니고 이거*/
+}
+
+.img-thumbnail {
+  padding: 1.25rem;
+}
+/* .container-fluid .col.img-box img {
+  width:100%;
+} */
