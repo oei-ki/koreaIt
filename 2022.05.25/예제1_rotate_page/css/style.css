@@ -1,0 +1,244 @@
+@charset "UTF-8";
+:root{
+  --primary-color: #13670b;
+  --text-color: white;
+  --bg-color: #db0f0f;
+  --btn-bg: white;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box;}
+html,body {height: 100%;}
+body {
+  background-color: var(--primary-color);
+  color: var(  --text-color);
+}
+ul,ol { list-style:none;}
+img {border: 0; width:100%;}
+a {text-decoration: none; color:var(--text-color);}
+
+/* common ui */
+.btn {
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.btn:hover {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top:0;
+  right: calc(50% + 350px);
+  bottom: 0;
+  left: 0;
+  background: var(--bg-color);
+  height: 100%;
+  z-index: -2;
+}
+
+#wrap {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto; /*auto 가운데 정렬*/
+  padding: 0 50px;
+}
+
+#wrap header {
+  position: absolute;
+  display: flex;
+  height: 80px;
+  top:0;
+  right: 50px; /*양쪽 끝 여백*/
+  left: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#wrap header h1 img {
+  height: 50px;
+}
+
+#wrap header nav#gnb ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrap header nav#gnb ul li {
+  margin-left: 10px;
+}
+
+main section {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section nav#pagenation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 50px;
+}
+
+main section nav#pagenation ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /*크기가 커질때 위로 커짐?(자식요소의 밑의 기준에)*/
+  width: 200px;
+}
+
+main section nav#pagenation ul li img {
+  height: 80px;
+  opacity: 0.8;
+  transition: .3s;
+}
+
+main section nav#pagenation ul li.active img, main section nav#pagenation ul li:hover img {
+  height: 120px;
+  opacity: 1;
+}
+
+/* change-img(main img), text(main text) */
+main section .items h2 {
+  position: relative;
+  margin-bottom: 20px;
+  display: none;
+}
+
+main section .items p {
+  margin-bottom: 20px;
+}
+
+main section .items.text {
+  flex-basis: 500px;
+  flex-shrink: 1; /*너비가 줄어들면 밑으로 떨어지게*/
+}
+
+main section .rotate-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  min-width: 500px;
+  height: 100vh;
+  z-index: -1;
+}
+
+main section .rotate-items:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom:0;
+  left: -200px;
+  border-top: 50vh solid var(--bg-color);
+  border-right: 50vh solid transparent;
+  border-bottom: 50vh solid var(--bg-color);
+  border-left: 50vh solid var(--bg-color);
+}
+
+main section .rotate-items ul {
+  position: relative;
+  width: 700px;
+  height: 700px;
+  transition: .3s;
+}
+
+main section .rotate-items ul li {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transform-origin: center;
+  transform: rotate(calc(var(--i)*90deg));
+}
+
+/* main section .rotate-items li{
+   --i:1;  html에서 변수지정 함 nth-chiid 할꺼 인덱스 부여해서 간단하게 만듬
+  transform: rotate(calc(var(--i)*90deg));
+} */
+
+main section .rotate-items li span {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 150px;
+  font-size: 24px;
+  text-align: left;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+@media screen and (max-width: 1240px) {
+  main section .items h2 {
+    display: block;
+  }
+  main section .rotate-items li span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main section .items.change-img {
+    flex-basis: 400px;
+    flex-shrink: 0; /*그림 줄어들지 않음*/
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body:after {
+    display: none;
+  }
+  #wrap {
+    padding: 0;
+  }
+  #wrap header {
+    flex-direction: column;
+    right: 0;
+    left: 0;
+  }
+  main section .items.change-img {
+    flex-basis: 200px;
+  }
+  main section .rotate-items {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  #gnb ul {
+    margin-top: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+  main section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  main section .items.change-img {
+    flex-basis: auto;
+    height: 200px;
+  }
+  main section .items.change-img img {
+    width: auto;
+    height: 100%;
+  }
+  main section .items.text {
+    flex-basis: auto;
+    text-align: center;
+  }
+}

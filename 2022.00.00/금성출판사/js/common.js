@@ -12,6 +12,9 @@ $(function(){
         $("#section2").addClass("on");
       }else if( 3788 <= scrH && scrH < 4715 ){
         $("#section2").removeClass("on");
+        $(".books ul li").addClass("on");
+      }else if( 800 <= scrH && scrH < 1934 ){
+        $("#anibanner h3").removeClass("on");
       }
 
     });

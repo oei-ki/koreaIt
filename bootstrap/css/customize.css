@@ -1,0 +1,75 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{font-family: 'GmarketSansMedium';}
+
+.row {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0 auto;
+}
+.container-fluid {
+  padding: 0;
+}
+
+.bg-primary {
+  background: linear-gradient(to right, #bf132b, #f64646);
+}
+
+.btn-img {
+  background-image: url("../img/top_sch.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.color-primary {
+  color: #f64646;
+}
+
+.btn-red {
+  background: #f64646;
+}
+
+.carousel {
+  margin-bottom: 50px;
+}
+
+.oimg {
+  background-image: url("../img/section02_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bgo {
+  background: #a20a1f;
+}
+
+.cardobg {
+  background: #ffed93;
+}
+
+.form-control {
+  border: 0;
+  border-bottom: 2px solid white;
+  border-radius: 0;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+button {
+  margin: 10px;
+}
+button:last-child {
+  margin-right: 0;
+}

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 *{margin: 0; padding: 0; border: 0;}
+a {text-decoration: none; color:#555;}
 ul,li {list-style: none;}
 html {
   color: #555;
@@ -23,7 +24,6 @@ html {
   100%{
     opacity: 0;
     margin-top: -20%;
-
     animation-timing-function: ease-out;
   }
 }
@@ -67,7 +67,6 @@ header {
   min-width: inherit;
   height: 80px;
   background: #fff;
-  overflow: hidden;
   z-index: 1000;
 }
 
@@ -82,7 +81,7 @@ header {
   width: 148px;
   height: 30px;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 1000;
   background-image: url('../img/logo.1e48841.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -116,14 +115,56 @@ header .gnb {
 }
 
 #gnbnav {
-  width: 700px;
+  position: relative;
+  width: 100%;
   height: 100%;
   display: inline-block;
   justify-content: space-between;
+  top: 20px;
+  right: 20%;
+}
+#gnbnav > ul {
+  float: right;
+  visibility: visible;
+  opacity: 1;
+  text-align: center;
+}
+#gnbnav > ul > li {
+  font-size: $fontSizeNormal;
+  font-weight: 800;
+  position: relative; /*블록을 만듬?*/
+  float: left;
+  margin-left: 90px;
+}
+#gnbnav > ul > li > a {
+  display: inline-block; /*버튼영역을 넓게 하기 위해*/
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+#gnbnav ul:hover {
 }
 
-header .gnb .mainmenu {
-  display: flex;
+.sub {
+  position: absolute;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  top: calc(100% + 40px);
+  /* opacity: 0; */
+  transition: .3s;
+  z-index: 9999;
+}
+.sub > li {
+  width: 100%; /*부모요소의(li)  float를 초기화시킴*/
+  margin: 0; /*부모요소의(li)   margin-left: 30px를 초기화시킴*/
+  box-sizing: border-box;
+  padding: 10px 10px;
+  min-width: 150px;
+  transition: .3s;
+}
+
+/* header .gnb .mainmenu { */
+  /* display: flex;
   position: relative;
   justify-content: space-between;
   width: 100%;
@@ -159,7 +200,7 @@ header ul li {
   font-weight: 600;
   line-height: 80px;
   cursor: pointer;
-}
+} */
 
 @media screen and (min-width: 600px) and (max-width : 599px) {
   header #righttitle a {
@@ -175,7 +216,7 @@ header ul li {
 /*메인 배너*/
 #main {
   padding-top: 80px;
-  z-index: 300;
+  z-index: 50;
   background: #f7f9fa;
 }
 
@@ -380,8 +421,11 @@ h1.text.first {
   font-size: 46px;
   line-height: 69px;
   padding-top: 10px;
+  transition: .3s;
 }
-
+#anibanner .inner h3.on {
+  padding: 30px;
+}
 /*section배너 공통*/
 .txt-box {
   color: #212121;
@@ -515,6 +559,11 @@ button i.arrow::after {
   width: 700px;
 }
 
+.books ul li.on {
+  margin-left: 0px;
+  opacity: 1;
+}
+
 .books ul.book-list1 {
   margin-left: 180px;
 }
@@ -527,14 +576,15 @@ button i.arrow::after {
 
 .books ul li {
   margin-top: 15px;
-  margin-left: 0;
+  margin-left: -30px;
   width: 164px;
   height: 213px;
   float: left;
   margin-right: 11px;
   background-size: cover;
-
+  opacity: 0;
   background-repeat: no-repeat;
+  transition: all .5s ease-out;
 }
 
 /*banner1*/
@@ -759,7 +809,9 @@ button.more span::before{
   border-radius: 20px 20px 0 0;
   padding: 50px 42px;
   bottom: 0;
-  transition: padding-bottom .3s ease-in-out;
+  top:0;
+  transition: .2s ease-in-out;
+
 }
 #banner3 li.border-card.left {
   left:0;
@@ -767,6 +819,11 @@ button.more span::before{
 #banner3 li.border-card.right {
   right: 0;
   background-color: #4a82ee;
+  color: white;
+}
+
+#banner3 li.border-card:hover {
+  top:-20px;
 }
 
 .border-card h3 {

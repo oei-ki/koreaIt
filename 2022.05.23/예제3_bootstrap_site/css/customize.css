@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.logo i {
+  font-size: 14px;
+  margin-right: 15px;
+}
+
 .w-100 {
   margin: 50px auto;
   background: rgba(0,0,0, .125);
