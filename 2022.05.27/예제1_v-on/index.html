@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>v-on</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">
+        <ul id="menu">
+          <li><a href="http://naver.com">company</a></li>
+          <li><a href="http://kakao.com">product</a></li>
+          <li><a href="http://daum.net">gallery</a></li>
+          <li><a href="http://instargram.com">location</a></li>
+        </ul>
+      </header>
+      <main v-bind:class="{on:isActive}">
+        <div class="container">
+        </div>
+        <button id="banner-btn" v-on:click="toggleElem">{{bannerToggleText}}</button>
+      </main>
+      <footer id="footer">
+        <div class="inner">
+          <h3><a href="#">logo</a></h3>
+          <ul id="f-menu">
+            <li v-for="(fList,index) in fMenuList">
+              <a v-bind:href="fList.ahref">{{index + 1}} {{fList.menu}}</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: '#app',
+        data: {
+          isActive: false,
+          bannerToggleText: 'close',
+          count: 0,
+          menuList: [
+            {menu: 'company',ahref: 'http://never.com'},
+            {menu: 'product',ahref: 'http://kakao.com'},
+            {menu: 'gallery',ahref: 'http://daum.net'},
+            {menu: 'location',ahref: 'http://instargram.com'}
+          ],
+          fMenuList: [
+            {menu: 'company',ahref: 'http://never.com'},
+            {menu: 'product',ahref: 'http://kakao.com'},
+            {menu: 'gallery',ahref: 'http://daum.net'},
+            {menu: 'location',ahref: 'http://instargram.com'},
+            {menu: 'notice',ahref: './community/notice.html'},
+            {menu: 'faq',ahref: './community/notice.html'}
+          ],
+          bgChange: [
+            {src:'./img/main_banner01.jpg', title:'bg01'},
+            {src:'./img/main_banner02.jpg', title:'bg02'},
+            {src:'./img/800x500.ratio.jpg', title:'bg03'},
+            {src:'./img/800x532.ratio.jpg', title:'bg04'},
+            {src:'./img/140CF64E4EF0DDE40E.jpg', title:'bg05'}
+          ]
+        },
+        methods: {
+          toggleElem: function(){
+            // console.log(event.currentTarget);
+            // event.currentTarget.classList.toggle('on')
+            // console.log(`변경 전 :${this.isActive}`);
+            this.isActive = !this.isActive
+            // console.log(`변경 후 :${this.isActive}`);
+            if( this.bannerToggleText == 'close'){ //베너가 열려있을
+              this.bannerToggleText = 'open';
+              if(this.count == this.bgChange.length - 1 ){
+                this.count = 0; //변수 값 초기화
+              }else {
+                this.count++;
+              }
+            }else{ //베너가 닫혀있을때
+              this.bannerToggleText = 'close';
+              document.body.querySelector('.container').style.backgroundImage = `url("${this.bgChange[this.count].src}")`
+            }
+            // if(this.isActive){
+            //   this.bannerToggleText = 'open'
+            // }else{
+            //   this.bannerToggleText = 'close'
+            // }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
