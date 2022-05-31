@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "@/assets/scss/var.scss"; //공통변수
+@import "@/assets/scss/mixin.scss"; //공통 mixin
+@import "@/assets/scss/initial.scss"; // 초기화
+@import "@/assets/scss/common.scss"; // 공통요소
+@import "@/assets/scss/component.scss"; // 공통 컴포넌트
+@import "@/assets/scss/layout.scss"; // 공통 레이아웃
+
+//페이지 분화
+@import "@/assets/scss/main.scss"; //메인페이지
+@import "@/assets/scss/subpage.scss"; //서브페이지
