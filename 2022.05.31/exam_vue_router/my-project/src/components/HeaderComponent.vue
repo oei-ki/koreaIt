@@ -7,7 +7,7 @@
     <nav id="top-nav">
       <ul>
         <li v-for="(list,index) in menuList">
-          <router-link v-bind:to="list.href">{{list.text}}</router-link>
+          <router-link v-bind:to="list.href">{{list.text}}</router-link> <!--각각 해당된 페이지, 라우트로 이동할 수 있습니다.컴포넌트를 사용하는 방법-->
           <!--company submenu-->
           <ul v-if="index == 0" class="sub-menu">
             <li v-for="list in companySubMeunList">
